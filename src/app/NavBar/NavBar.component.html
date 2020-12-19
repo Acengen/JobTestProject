@@ -1,0 +1,10 @@
+<div class="sidebar" [ngClass]="{'isActive': !showNav}">
+    <a [routerLink]="['/page1']">Page 1</a>
+    <a [routerLink]="['/page2']">Page 2</a>
+    <a [routerLink]="['/fake-page3']">Page 3</a>
+    <a [routerLink]="['/fake-page4']">Page 4</a>
+    <i class="fa fa-angle-up hide" style="font-size: 30px;" (click)="HideNav()" tooltip="Hide Sidebar"></i>
+</div>
+<div class="sidebar-show-arrow" *ngIf="!showNav">
+    <i class="fa fa-angle-down show" style="font-size:30px;" (click)="showNav=true" tooltip="Show Sidebar"></i>
+</div>

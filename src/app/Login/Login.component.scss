@@ -1,0 +1,15 @@
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    h3 {
+        font-weight: lighter;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}

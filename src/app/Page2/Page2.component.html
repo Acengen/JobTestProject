@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="filterM(f)">
+  <div class="mb-3">
+    <input ngModel type="text" name="search"  class="form-control" placeholder="office,pc,photo,etc...">
+    <button class="btn btn-sm btn-dark" type="submit">Search</button>
+  </div>
+  
+</form>
+<div class="gallery my-3">
+  <div class="card" *ngFor="let photo of photoGallery" style="max-width: 400px;"> 
+        <img src="{{photo.urls.regular}}" alt="" style="width: 100%;height: 100%;display: block;">
+  </div>
+</div>

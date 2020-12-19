@@ -1,0 +1,19 @@
+<form #f="ngForm" (ngSubmit)="Login()">
+  <h3>Login</h3>
+ <div>
+  <label for="usr">
+    Username
+  </label>
+    <input type="text" name="username" #username="ngModel" id="usr" class="form-control" ngModel required>
+    <p *ngIf="!username.valid && username.touched" class="text-danger">Username required</p>
+ </div>
+ <div>
+  <label for="psw">
+    Password
+  </label>
+    <input type="password" name="password" #psw="ngModel" id="psw" class="form-control" ngModel required minlength=6>
+    <p class="text-danger" *ngIf="!psw.valid && psw.touched">Password required</p>
+    <p class="text-danger" *ngIf="!psw.valid && psw.touched">Password need 6 characters</p>
+ </div>
+ <button [disabled]="!f.valid" type="submit" class="btn btn-light">LOGIN</button>
+</form>

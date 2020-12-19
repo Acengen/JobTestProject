@@ -1,0 +1,12 @@
+<div class="overlay">
+  <form #f="ngForm" (ngSubmit)="Add(f)">
+    <h3>Add User</h3>
+    <input type="text" placeholder="Title" class="form-control" name="Title" ngModel required>
+    <textarea class="form-control" name="Body" placeholder="Body"  cols="10" rows="6" ngModel></textarea>
+    <select name="userId" [ngModel]="default" class="form-control">
+      <option *ngFor="let item of userId" [value]="item">{{item}}</option>
+    </select>
+    <button [disabled]="!f.valid" class="btn btn-dark d-block" type="submit">Add</button>
+    <button [routerLink]="['/page1']" routerLinkActive="router-link-active"  type="button" class="btn btn-danger">Close</button>
+  </form>
+</div>
