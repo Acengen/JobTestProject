@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page2Component implements OnInit {
   photoGallery = [];
-  searchText = ""
+  searchText = "";
+  errorMsg:string;
   constructor(private service:TableService) { }
 
   ngOnInit() {
@@ -25,6 +26,10 @@ export class Page2Component implements OnInit {
         for(let key in res) {
           this.photoGallery = res[key]
       }
+       },error => {
+         if(error) {
+            this.errorMsg = "Something went wrong with filtering photos"
+         }
        })
   }
 }

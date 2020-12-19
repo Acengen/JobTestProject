@@ -13,6 +13,7 @@ export class AddComponent implements OnInit {
   userId:number[]= [1,2,3,4,5,6,7,8,9,10];
   default:number = 1;
   tableData:Table[] = [];
+  errorMsg:string;
 
   constructor(private tableservice:TableService,private route:Router,private router:ActivatedRoute) { }
 
@@ -34,6 +35,10 @@ export class AddComponent implements OnInit {
         f.reset();
         this.tableData.push(res)
         this.tableservice.tableDataEmitter.emit(this.tableData)
+      },error => {
+        if(error) {
+            this.errorMsg = "Something went wrong when add a user"
+        }
       });
   }
 }

@@ -13,6 +13,8 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 export class Page1Component implements OnInit {
   TableData:Table[] = [];
   errorMsg = "";
+  errorLoadingPosts:string;
+
   userId:number[]= [1,2,3,4,5,6,7,8,9,10];
 
   headers = ["Title","Body","UserId", "Actions"];
@@ -21,6 +23,7 @@ export class Page1Component implements OnInit {
   filterArr = []
   
   isEddit:boolean;
+  filterErrorMsg:string;
 
   
   constructor(private tableservice:TableService,private route:ActivatedRoute) { }
@@ -37,7 +40,7 @@ export class Page1Component implements OnInit {
           },
           error => {
             if(error){
-              this.errorMsg = "Something want wrong!"
+              this.errorLoadingPosts = "Something want wrong!"
             }
           }
         );
@@ -52,7 +55,7 @@ export class Page1Component implements OnInit {
       console.log("delete request",res)
       this.TableData.splice(index,1);
     },error => {
-        this.errorMsg = "Something went wrong"
+        this.errorMsg = "Something went wrong when deleting"
     })
   }
 
@@ -71,6 +74,10 @@ export class Page1Component implements OnInit {
       let selecnumber = +f.value.filter;
       this.tableservice.filterData(selecnumber).subscribe(res => {
         this.TableData = res;
+      },error => {
+         if(error)
+            this.filterErrorMsg = "Something went wrong when filtering";
+          
       })
   }
 }

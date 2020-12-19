@@ -10,7 +10,6 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Login/Login.component';
-import { UserDataComponent } from './UserData/UserData.component';
 import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './NavBar/NavBar.component';
 import { Page3Component } from './Page3/Page3.component';
@@ -27,7 +26,6 @@ import { FilterPipe } from './Filter.pipe';
   declarations: [									
     AppComponent,
     LoginComponent,
-    UserDataComponent,
     NavBarComponent,
     Page3Component,
     Page4Component,

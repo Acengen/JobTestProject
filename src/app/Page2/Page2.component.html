@@ -3,7 +3,7 @@
     <input ngModel type="text" name="search"  class="form-control" placeholder="office,pc,photo,etc...">
     <button class="btn btn-sm btn-dark" type="submit">Search</button>
   </div>
-  
+  <p *ngIf="errorMsg" class="bg-warning text-dark py-3 text-center"><i class="fa fa-warning"></i> {{errorMsg}}</p>
 </form>
 <div class="gallery my-3">
   <div class="card" *ngFor="let photo of photoGallery" style="max-width: 400px;"> 

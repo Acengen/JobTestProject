@@ -1,5 +1,4 @@
 <div class="overlay">
-    <p *ngIf="errorMsg" class="bg-warning text-dark py-3 text-center"><i class="fa fa-warning"></i> {{errorMsg}}</p>
     <div class="card" style="width: 400px;">
         <div class="card-body">
             <h3>{{user.title}}</h3>
@@ -14,9 +13,11 @@
             <textarea name="body" class="form-control" cols="30" rows="3" [(ngModel)]="user.body" required></textarea>
             <button [disabled]="!f.valid" type="submit">Update</button>
         </form>
-    </div>
-    <div class="card-bottom">
-        <button [routerLink]="['/page1']" >Back</button>
+        <p *ngIf="errorMsg" class="bg-warning text-dark py-3 text-center"><i class="fa fa-warning"></i> {{errorMsg}}</p>
+        <div class="card-bottom">
+            <button [routerLink]="['/page1']" >Back</button>
+        </div>
+        
     </div>
     
 </div>

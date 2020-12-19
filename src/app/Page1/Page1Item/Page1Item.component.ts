@@ -29,7 +29,7 @@ export class Page1ItemComponent implements OnInit {
       this.tableservice.updateUser(this.user.id,f.value).subscribe(res => {
           location.reload();
       },error => {
-          this.errorMsg = "Something went wrong"
+          this.errorMsg = "Something went wrong when updating"
       });      
   }
 }

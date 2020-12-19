@@ -2,12 +2,6 @@
   "posts": [
     {
       "userId": 1,
-      "id": 5,
-      "title": "nesciunt quas odio",
-      "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
-    },
-    {
-      "userId": 1,
       "id": 6,
       "title": "dolorem eum magni eos aperiam quia",
       "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
@@ -356,12 +350,6 @@
     },
     {
       "userId": 7,
-      "id": 66,
-      "title": "Djrodje",
-      "body": "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe"
-    },
-    {
-      "userId": 7,
       "id": 67,
       "title": "aliquid eos sed fuga est maxime repellendus",
       "body": "reprehenderit id nostrum\nvoluptas doloremque pariatur sint et accusantium quia quod aspernatur\net fugiat amet\nnon sapiente et consequatur necessitatibus molestiae"
@@ -500,12 +488,6 @@
     },
     {
       "userId": 10,
-      "id": 91,
-      "title": "aut amet sed",
-      "body": "libero voluptate eveniet aperiam sed\nsunt placeat suscipit molestias\nsimilique fugit nam natus\nexpedita consequatur consequatur dolores quia eos et placeat"
-    },
-    {
-      "userId": 10,
       "id": 92,
       "title": "ratione ex tenetur perferendis",
       "body": "aut et excepturi dicta laudantium sint rerum nihil\nlaudantium et at\na neque minima officia et similique libero et\ncommodi voluptate qui"
@@ -539,12 +521,6 @@
       "id": 99,
       "title": "temporibus sit alias delectus eligendi possimus magni",
       "body": "quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"
-    },
-    {
-      "userId": 10,
-      "id": 100,
-      "title": "at nam consequatur ea labore ea harum",
-      "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
   ]
 }

@@ -1,4 +1,5 @@
 <p *ngIf="errorMsg" class="bg-warning text-dark py-3 text-center"><i class="fa fa-warning"></i> {{errorMsg}}</p>
+<p *ngIf="errorLoadingPosts" class="bg-danger text-light py-3 text-center"><i class="fa fa-warning"></i> {{errorLoadingPosts}}</p>
 <h3 class="text-center">Table of users</h3>
 <div class="text-center">
   <button [routerLink]="['add']" class="btn btn-success">Add New User</button>
@@ -12,6 +13,7 @@
       <button class="form-control" type="submit">Filter by user id</button>
     </div>
   </form>
+  <p *ngIf="filterErrorMsg" class="bg-warning text-dark py-3 text-center"><i class="fa fa-warning"></i> {{filterErrorMsg}}</p>
 </div>
 <table class="table table-bordered">
   <thead>
