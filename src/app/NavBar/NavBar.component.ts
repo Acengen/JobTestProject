@@ -1,3 +1,4 @@
+import { TableService } from './../Table.service';
 import { FakeAuthService } from './../FakeAuth.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./NavBar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  showNav:boolean = true;
+  showNav:boolean;
   
-  constructor(private authservice:FakeAuthService) { }
+  constructor(private authservice:FakeAuthService,private service:TableService) { }
 
   ngOnInit() {
-   
+       this.showNav = this.service.showNav;
+       this.service.showNavEmitter.subscribe(s => this.showNav = s);
   }
 
   HideNav() {

@@ -14,28 +14,26 @@ export class Page1Component implements OnInit {
   TableData:Table[] = [];
   errorMsg = "";
   errorLoadingPosts:string;
-
   userId:number[]= [1,2,3,4,5,6,7,8,9,10];
-
   headers = ["Title","Body","UserId", "Actions"];
   returnedArray =[];
-
   filterArr = []
   
   isEddit:boolean;
   filterErrorMsg:string;
+  showNav:boolean = false;
 
   
   constructor(private tableservice:TableService,private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.tableservice.isedditedEmitter.subscribe(e => this.isEddit = e);
-    
     this.tableservice.getPosts().subscribe(
           (resdata:Table[]) => {
            for(let key in resdata){
              this.TableData.push(resdata[key])
            }
+           this.tableservice.showNavEmitter.emit(this.showNav);
            this.returnedArray = this.TableData.slice(0,10);
           },
           error => {

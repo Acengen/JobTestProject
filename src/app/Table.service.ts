@@ -8,12 +8,15 @@ import { Table } from './Interfaces/tableInterface';
 export class TableService {
   
   constructor(private http:HttpClient) { }
-  isedditedEmitter = new EventEmitter<boolean>();
+  
 
   isEdditedProp:boolean;
   tableData:Table[] = [];
-  tableDataEmitter = new EventEmitter<Table[]>();
+  showNav:boolean = true;
 
+  showNavEmitter = new EventEmitter<boolean>();
+  isedditedEmitter = new EventEmitter<boolean>();
+  tableDataEmitter = new EventEmitter<Table[]>();
   userEmitter = new EventEmitter<Table>();
 
    isEddited(){
@@ -25,7 +28,10 @@ export class TableService {
   getPosts() {
     let headers = new HttpHeaders();
     headers = headers.append("CustomeHeader", "XYZ")
-     return this.http.get<Table[]>("http://localhost:3000/posts",{headers:headers});
+     return this.http.get<Table[]>("http://localhost:3000/posts",{headers:headers}).pipe(tap(res => {
+       this.showNav = true;
+       this.showNavEmitter.emit(this.showNav);
+     }));
   }
 
   postUser(user:Table){
