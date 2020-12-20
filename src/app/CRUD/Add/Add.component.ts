@@ -14,6 +14,7 @@ export class AddComponent implements OnInit {
   default:number = 1;
   tableData:Table[] = [];
   errorMsg:string;
+  showNav:boolean;
 
   constructor(private tableservice:TableService,private route:Router,private router:ActivatedRoute) { }
 
@@ -21,14 +22,17 @@ export class AddComponent implements OnInit {
       this.router.data.subscribe(
         (data:Data) => {
           this.tableData = data['posts'];
+          this.tableservice.showNavEmitter.emit(this.showNav)
         }
-      )
+      );
+
   }
 
   Add(f:NgForm) {
     const userToPost = {
       title: f.value.Title,
       body:f.value.Body,
+      userId: f.value.userId
     }
       this.tableservice.postUser(userToPost).subscribe(res => {
         console.log("User added",res)

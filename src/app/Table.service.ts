@@ -17,7 +17,6 @@ export class TableService {
   showNavEmitter = new EventEmitter<boolean>();
   isedditedEmitter = new EventEmitter<boolean>();
   tableDataEmitter = new EventEmitter<Table[]>();
-  userEmitter = new EventEmitter<Table>();
 
    isEddited(){
       this.isedditedEmitter.emit(this.isEdditedProp);
@@ -46,9 +45,9 @@ export class TableService {
     return this.http.get<Table>("http://localhost:3000/posts/" + id)
   }
 
-  updateUser(userId:number,value) {
-    return this.http.patch("http://localhost:3000/posts/" + userId,value).pipe(tap(res => {
-      this.userEmitter.emit(value);
+  updateUser(userId:number,value:Table) {
+    return this.http.patch<Table>("http://localhost:3000/posts/" + userId,value).pipe(tap(res => {
+     
     }))
   }
 

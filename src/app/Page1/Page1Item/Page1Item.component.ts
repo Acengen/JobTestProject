@@ -12,7 +12,6 @@ import { ActivatedRoute, Params, Data } from '@angular/router';
 })
 export class Page1ItemComponent implements OnInit {
   user:Table;
-  userId:number;
   edit:boolean;
   errorMsg:string;
   constructor(private tableservice:TableService,private route:ActivatedRoute) { }
@@ -23,7 +22,6 @@ export class Page1ItemComponent implements OnInit {
         this.user = data['data']
        }
      )
-     this.tableservice.userEmitter.subscribe(u => this.user = u);
   }
   Update(f:NgForm) {
       this.tableservice.updateUser(this.user.id,f.value).subscribe(res => {

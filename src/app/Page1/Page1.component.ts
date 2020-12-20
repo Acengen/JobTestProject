@@ -21,7 +21,7 @@ export class Page1Component implements OnInit {
   
   isEddit:boolean;
   filterErrorMsg:string;
-  showNav:boolean = false;
+  showNav:boolean;
 
   
   constructor(private tableservice:TableService,private route:ActivatedRoute) { }
@@ -34,7 +34,7 @@ export class Page1Component implements OnInit {
              this.TableData.push(resdata[key])
            }
            this.tableservice.showNavEmitter.emit(this.showNav);
-           this.returnedArray = this.TableData.slice(0,10);
+           //this.returnedArray = this.TableData.slice(0,10);
           },
           error => {
             if(error){
