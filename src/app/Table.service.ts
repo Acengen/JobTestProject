@@ -47,7 +47,8 @@ export class TableService {
 
   updateUser(userId:number,value:Table) {
     return this.http.patch<Table>("http://localhost:3000/posts/" + userId,value).pipe(tap(res => {
-     
+            let itemIndex = this.tableData.findIndex(item => item.id == res.id);
+            this.tableData[itemIndex] = res;
     }))
   }
 

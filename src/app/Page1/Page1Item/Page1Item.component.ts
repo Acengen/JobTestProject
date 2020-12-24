@@ -25,7 +25,7 @@ export class Page1ItemComponent implements OnInit {
   }
   Update(f:NgForm) {
       this.tableservice.updateUser(this.user.id,f.value).subscribe(res => {
-          location.reload();
+          
       },error => {
           this.errorMsg = "Something went wrong when updating"
       });      

@@ -33,6 +33,7 @@ export class Page1Component implements OnInit {
            for(let key in resdata){
              this.TableData.push(resdata[key])
            }
+           this.tableservice.tableData = this.TableData;
            this.tableservice.showNavEmitter.emit(this.showNav);
            //this.returnedArray = this.TableData.slice(0,10);
           },
