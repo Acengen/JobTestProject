@@ -63,16 +63,12 @@ export class Page1Component implements OnInit {
     this.tableservice.isedditedEmitter.emit(this.isEddit);
   }
 
-  // //paginations
-  // pageChanged(event: PageChangedEvent): void {
-  //   const startItem = (event.page - 1) * event.itemsPerPage;
-  //   const endItem = event.page * event.itemsPerPage;
-  //   this.returnedArray = this.TableData.slice(startItem, endItem);
-  // }
+  
   FilterData(f:NgForm) {
       let selecnumber = +f.value.filter;
       this.tableservice.filterData(selecnumber).subscribe(res => {
         this.TableData = res;
+        this.tableservice.tableData = this.TableData;
       },error => {
          if(error)
             this.filterErrorMsg = "Something went wrong when filtering";

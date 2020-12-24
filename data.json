@@ -3,7 +3,7 @@
     {
       "userId": 1,
       "id": 7,
-      "title": "Djordje",
+      "title": "Djordje koole",
       "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
     },
     {
@@ -33,7 +33,7 @@
     {
       "userId": 2,
       "id": 14,
-      "title": "voluptatem eligendi optio",
+      "title": "Milenko",
       "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
     },
     {
@@ -483,8 +483,8 @@
     {
       "userId": 10,
       "id": 92,
-      "title": "ratione ex tenetur perferendis",
-      "body": "aut et excepturi dicta laudantium sint rerum nihil\nlaudantium et at\na neque minima officia et similique libero et\ncommodi voluptate qui"
+      "title": "Miki",
+      "body": "Profesor"
     },
     {
       "userId": 10,
@@ -515,6 +515,12 @@
       "id": 99,
       "title": "temporibus sit alias delectus eligendi possimus magni",
       "body": "quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"
+    },
+    {
+      "title": "User1",
+      "body": "User 1 is the best",
+      "userId": "9",
+      "id": 100
     }
   ]
 }
